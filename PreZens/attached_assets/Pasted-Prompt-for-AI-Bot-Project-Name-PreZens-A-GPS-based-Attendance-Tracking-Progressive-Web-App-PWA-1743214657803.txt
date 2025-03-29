@@ -1,0 +1,107 @@
+Prompt for AI Bot:
+
+Project Name: PreZens – A GPS-based Attendance Tracking Progressive Web App (PWA).
+
+1. Overview
+PreZens is an attendance tracking application designed for businesses, organizations, and schools. It enables users to check in using GPS-based validation, with biometric authentication and manual check-ins as backups. The app provides real-time attendance reporting via dashboards and notifications.
+
+2. Key Features
+GPS-Based Check-In: Users must be within a predefined location to check in.
+
+Admin-Defined Meeting Locations:
+
+Admins create meetings and define attendance zones using:
+
+Manual Address Entry (converted to GPS coordinates via Google Maps API).
+
+Map Selection (Admin clicks on a map to choose a location).
+
+Current Location (Admin's current GPS location is saved).
+
+Each meeting has:
+
+Name
+
+Date & Time
+
+Allowed Check-In Radius (Configurable in meters)
+
+Authentication:
+
+Google Sign-In & Email/Password Login
+
+Attendance Validation:
+
+Primary: GPS location verification
+
+Secondary: Biometric authentication (fingerprint/face recognition)
+
+Backup: Manual check-in (requires admin approval)
+
+User Roles & Dashboards:
+
+Employee View: Check-in, history, notifications
+
+Admin View: Attendance reports, user management, meeting creation
+
+Real-Time Reporting & Notifications:
+
+Attendance data is shown in dashboards, graphs, and tables.
+
+Notifications for missed check-ins and late arrivals.
+
+Check-In History: Users can view past check-ins.
+
+PWA Functionality: Installable on devices for a native-like experience.
+
+Location Permissions Handling:
+
+Requests location access only once.
+
+Stores permission status in localStorage to prevent repeated prompts.
+
+Encourages users to select "Allow Always" for seamless check-ins.
+
+3. Tech Stack
+Frontend: React (TypeScript) with Material-UI (@mui)
+
+Backend: Next.js (Node.js)
+
+Database: PostgreSQL with PostGIS for geospatial queries
+
+Geolocation API: Google Maps API for location processing
+
+Deployment: PWA (no Play Store or APK distribution)
+
+4. Functionality Breakdown
+Admin Workflow:
+
+Log in → Navigate to Dashboard.
+
+Create a meeting → Set location via address, map, or current location.
+
+Configure check-in radius → Save.
+
+View attendance records in real-time.
+
+Employee Workflow:
+
+Open PreZens (PWA).
+
+Click "Check-In".
+
+If within the allowed GPS radius → Marked as "Present".
+
+If outside the allowed radius → Check-in denied.
+
+Attendance history updates.
+
+5. Advanced Features (Future Considerations)
+Slack Integration: Notifications for missed check-ins.
+
+Offline Mode: Check-ins stored locally and synced when online.
+
+QR Code Check-In: Admins generate QR codes for meeting locations.
+
+Final Output: The AI should generate clean, scalable code following best practices, ensuring PreZens meets all the outlined requirements.
+
